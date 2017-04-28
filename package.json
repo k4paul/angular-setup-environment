@@ -1,7 +1,7 @@
 {
-  "name": "framework",
+  "name": "angular-setup-environment",
   "version": "1.0.0",
-  "description": "Lightweight JS starter framework",
+  "description": "Lightweight angular starter framework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

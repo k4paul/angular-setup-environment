@@ -1,8 +1,17 @@
+const path = require('path');
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+  template: './src/index.html',
+  filename: 'index.html',
+  inject: 'body'
+})
+
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: __dirname,
-    filename: "./dist/bundle.js",
+    path: path.resolve('dist'),
+    filename: "bundle.js",
   },
   eslint: {
     formatter: require("eslint-friendly-formatter"),
@@ -19,4 +28,5 @@ module.exports = {
       { test: /\.css$/, loader: "style-loader!css-loader!postcss-loader" },
     ],
   },
+  plugins: [HtmlWebpackPluginConfig]
 };

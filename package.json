@@ -4,12 +4,16 @@
   "description": "Lightweight angular starter framework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --progress --colors",
+    "lint": "eslint src/**",
+    "build": "rm -rf ./dist && NODE_ENV=production ./node_modules/.bin/webpack"
   },
   "author": "Kellie Kercher Morgan",
-  "license": "ISC",
-  "private": true,
+  "license": "MIT",
   "dependencies": {
+    "html-webpack-plugin": "^2.28.0",
+    "path": "^0.12.7",
     "autoprefixer": "^6.3.1",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
